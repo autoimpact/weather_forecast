@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Forecast</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <nav class="navbar fixed-top">
+    <a class="navbar-brand" href="#">
+      <img class="webicon"
+        src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjQ3MnB0IiB2aWV3Qm94PSIxIDAgNDcxIDQ3MiIgd2lkdGg9IjQ3MnB0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Im00MDAuMzM1OTM4IDE5MmMwIDY2LjI3MzQzOC01My43MjY1NjMgMTIwLTEyMCAxMjAtNjYuMjc3MzQ0IDAtMTIwLTUzLjcyNjU2Mi0xMjAtMTIwczUzLjcyMjY1Ni0xMjAgMTIwLTEyMGM2Ni4yNzM0MzcgMCAxMjAgNTMuNzI2NTYyIDEyMCAxMjB6bTAgMCIgZmlsbD0iI2ZkZDAyMCIvPjxwYXRoIGQ9Im0yODAuMzM1OTM4IDQ4Yy00LjQyMTg3NiAwLTgtMy41ODIwMzEtOC04di0zMmMwLTQuNDE3OTY5IDMuNTc4MTI0LTggOC04IDQuNDE3OTY4IDAgOCAzLjU4MjAzMSA4IDh2MzJjMCA0LjQxNzk2OS0zLjU4MjAzMiA4LTggOHptMCAwIiBmaWxsPSIjZmRkMDIwIi8+PHBhdGggZD0ibTQ2NC4zMzU5MzggMjAwaC0zMmMtNC40MjE4NzYgMC04LTMuNTgyMDMxLTgtOHMzLjU3ODEyNC04IDgtOGgzMmM0LjQxNzk2OCAwIDggMy41ODIwMzEgOCA4cy0zLjU4MjAzMiA4LTggOHptMCAwIiBmaWxsPSIjZmRkMDIwIi8+PHBhdGggZD0ibTM3Ni4zMzU5MzggMjk2Yy01Ljg1MTU2MyAwLTExLjY5MTQwNy41ODU5MzgtMTcuNDI1NzgyIDEuNzQyMTg4LTQuMzI0MjE4LTIxLjU4MjAzMi0xOC4zMDQ2ODctMzkuOTkyMTg4LTM3LjkzMzU5NC00OS45NTcwMzItMTkuNjI1LTkuOTY0ODQ0LTQyLjczODI4MS0xMC4zODI4MTItNjIuNzE0ODQzLTEuMTM2NzE4LTE4LjA3ODEyNS00OS43OTY4NzYtNzMuMTAxNTYzLTc1LjUwNzgxMy0xMjIuODk4NDM4LTU3LjQyOTY4OC00OS43OTY4NzUgMTguMDgyMDMxLTc1LjUwNzgxMiA3My4xMDU0NjktNTcuNDI5Njg3IDEyMi45MDIzNDQtNDMuNjIxMDk0IDEuMzc4OTA2LTc4LjA3ODEyNSAzNy40ODA0NjgtNzcuNDI1NzgyIDgxLjEyMTA5NC42NTYyNSA0My42MzY3MTggMzYuMTgzNTk0IDc4LjY4NzUgNzkuODI4MTI2IDc4Ljc1NzgxMmgyOTZjNDguNTk3NjU2IDAgODgtMzkuMzk4NDM4IDg4LTg4cy0zOS40MDIzNDQtODgtODgtODh6bTAgMCIgZmlsbD0iI2EzZDRmNyIvPjxnIGZpbGw9IiNmZGQwMjAiPjxwYXRoIGQ9Im0xNjguMzM1OTM4IDgwLTMyLTMyIi8+PHBhdGggZD0ibTE2OC4zMzU5MzggODhjLTIuMTI1IDAtNC4xNTYyNS0uODQzNzUtNS42NTYyNS0yLjM0Mzc1bC0zMi0zMmMtMi4wODIwMzItMi4wMDc4MTItMi45MTQwNjMtNC45ODQzNzUtMi4xODM1OTQtNy43ODEyNS43MzQzNzUtMi43OTY4NzUgMi45MTc5NjgtNC45ODA0NjkgNS43MTQ4NDQtNS43MTA5MzggMi43OTY4NzQtLjczNDM3NCA1Ljc2OTUzMS4xMDE1NjMgNy43ODEyNSAyLjE3OTY4OGwzMiAzMmMyLjI4NTE1NiAyLjI4OTA2MiAyLjk2ODc1IDUuNzMwNDY5IDEuNzMwNDY4IDguNzE4NzUtMS4yMzgyODEgMi45ODgyODEtNC4xNTIzNDQgNC45Mzc1LTcuMzg2NzE4IDQuOTM3NXptMCAwIi8+PHBhdGggZD0ibTM5Mi4zMzU5MzggODAgMzItMzIiLz48cGF0aCBkPSJtMzkyLjMzNTkzOCA4OGMtMy4yMzgyODIgMC02LjE1MjM0NC0xLjk0OTIxOS03LjM5MDYyNi00LjkzNzUtMS4yMzgyODEtMi45ODgyODEtLjU1NDY4Ny02LjQyOTY4OCAxLjczNDM3Ni04LjcxODc1bDMyLTMyYzIuMDA3ODEyLTIuMDc4MTI1IDQuOTgwNDY4LTIuOTE0MDYyIDcuNzc3MzQzLTIuMTc5Njg4IDIuNzk2ODc1LjczMDQ2OSA0Ljk4NDM3NSAyLjkxNDA2MyA1LjcxNDg0NCA1LjcxMDkzOHMtLjEwMTU2MyA1Ljc3MzQzOC0yLjE3OTY4NyA3Ljc4MTI1bC0zMiAzMmMtMS41IDEuNS0zLjUzNTE1NyAyLjM0Mzc1LTUuNjU2MjUgMi4zNDM3NXptMCAwIi8+PC9nPjwvc3ZnPg=="
+        width="40" height="40" alt="">
+    </a>
+    <h5 class="webtitle">臺灣各地天氣預報</h5>
+  </nav>
+  <div class="wrap">
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        加入追蹤清單
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      </div>
+    </div>
+    <div class="output">
+      <!--顯示區外層-->
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./index.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+    integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+    crossorigin="anonymous"></script>
+</body>
+
+<footer class="navbar fixed-bottom">
+  <span>*本頁面資料展示未來 24-36 小時之天氣預報</span>
+  <span>Designed and built by Shirlyn Yen. Data from Central Weather Bureau API.</span>
+</footer>
+
+</html>
