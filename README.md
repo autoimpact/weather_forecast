@@ -10,3 +10,6 @@ The project is a simple application for checking weather forecast in cities of T
 <h3>Demo</h3>
 <img src="https://github.com/autoimpact/weather_forecast/blob/master/readme/weather_forecast_cover.gif" alt="cover-image">
 
+<h3>Credit</h3>
+<p>中央氣象局開放資料平台 https://opendata.cwb.gov.tw/dist/opendata-swagger.html</p>
+<p>BaseURL: opendata.cwb.gov.tw/api</p>
